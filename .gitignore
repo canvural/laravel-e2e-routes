@@ -1,0 +1,8 @@
+build
+docs
+vendor
+coverage
+/.phpunit.result.cache
+.idea
+/coverage.clover
+/.phpcs-cache

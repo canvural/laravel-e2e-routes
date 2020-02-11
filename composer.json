@@ -1,0 +1,68 @@
+{
+    "name": "canvural/laravel-e2e-routes",
+    "description": "Set of routes for you to use in E2E tests.",
+    "keywords": [
+        "laravel",
+        "e2e",
+        "routes",
+        "testing"
+    ],
+    "homepage": "https://github.com/canvural/laravel-e2e-routes",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Can Vural",
+            "email": "can9119@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.2",
+        "illuminate/database": "^6.0 || ^7.0"
+    },
+    "require-dev": {
+        "doctrine/coding-standard": "6.0",
+        "nunomaduro/larastan": "^0.5",
+        "orchestra/testbench": "^4.0 || ^5.0",
+        "phpstan/extension-installer": "^1.0",
+        "phpstan/phpstan-mockery": "^0.12",
+        "phpstan/phpstan-phpunit": "^0.12",
+        "phpunit/phpunit": "^8",
+        "roave/security-advisories": "dev-master"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "Vural\\E2ERoutes\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Vural\\E2ERoutes\\Tests\\": "tests/",
+            "App\\" : "tests/Models"
+        }
+    },
+    "scripts": {
+        "test:types": "vendor/bin/phpstan analyse --ansi",
+        "test:unit": "vendor/bin/phpunit --colors=always",
+        "test:style": "vendor/bin/phpcs",
+        "test:unit-coverage": "vendor/bin/phpunit --coverage-html coverage",
+        "test": [
+            "@test:style",
+            "@test:types",
+            "@test:unit"
+        ]
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Vural\\E2ERoutes\\E2ERoutesServiceProvider"
+            ]
+        }
+    }
+}

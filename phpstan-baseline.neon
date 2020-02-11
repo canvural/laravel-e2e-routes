@@ -1,0 +1,11 @@
+parameters:
+	ignoreErrors:
+		-
+			message: "#^Function factory invoked with 2 parameters, 0 required\\.$#"
+			count: 1
+			path: src/Http/Controller/FactoryController.php
+
+		-
+			message: "#^Undefined variable\\: \\$factory$#"
+			path: tests/factories
+

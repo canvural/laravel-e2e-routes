@@ -1,0 +1,12 @@
+includes:
+    - phpstan-baseline.neon
+parameters:
+    level: 8
+    paths:
+        - src
+        - config
+        - tests
+    ignoreErrors:
+        -
+            message: '#Method [a-zA-Z0-9\\_\(\)]+::[a-zA-Z0-9\\_\(\)]+ has no return typehint specified#'
+            path: tests/*
