@@ -11,7 +11,7 @@ This package provides a set of rules to help you manage your database state when
 You can install the package via composer:
 
 ```bash
-composer require canvural/laravel-e2e-routes
+composer require --dev canvural/laravel-e2e-routes
 ```
 
 If you wish to customize some options, you may publish the config file with
